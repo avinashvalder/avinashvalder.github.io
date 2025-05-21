@@ -1,36 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Avinash Valder | Developer</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      text-align: center;
-      margin: 0;
-      height: 100vh;
-      display: grid;
-      place-items: center;
-      background: #f0f0f0;
-    }
-    .highlight { color: #0070f3; }
-    a {
-      display: inline-block;
-      margin-top: 1rem;
-      text-decoration: none;
-      color: white;
-      background: #0070f3;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-    }
-  </style>
+  <link href="style.css" rel="stylesheet" />
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/1903871?v=4" type="image/png">
+  <!-- AOS Animate on Scroll CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
+
 <body>
-  <main>
-    <h1>Hello, I'm <span class="highlight">Avinash Valder</span></h1>
-    <p>Frontend Developer • JavaScript | Astro | React</p>
-    <a href="mailto:avinashvalder7@gmail.com">Contact Me</a>
-  </main>
+  <div id="gradient-bg"></div>
+  <div class="container">
+    <header>
+      <h1 data-aos="fade-up">
+        👋 Hi, I'm <span class="highlight">Avinash Valder</span><br>
+        <span class="typed-wrap">
+          <span id="typed"></span>
+          <span id="typed-placeholder">React Specialist.</span>
+        </span>
+      </h1>
+      <p data-aos="fade-up" data-aos-delay="100">
+        <span class="subtitle">Crafting seamless web experiences with React, Figma, Adobe XD and more.</span>
+      </p>
+      <div class="actions" data-aos="fade-up" data-aos-delay="200">
+          <div class="social-icons">
+          <a href="https://linkedin.com/in/avinashvalder" target="_blank" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+          <a href="https://instagram.com/avinash_valder" target="_blank" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+        </div>
+      </div>
+    </header>
+
+    <nav class="nav" data-aos="fade-down" data-aos-delay="350">
+      <a href="#projects">Projects</a>
+      <a href="#nowplaying">Now Playing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="projects" id="projects">
+      <h2 data-aos="fade-up">🚀 Featured Projects</h2>
+      <div class="project-grid">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="50">
+          <img src="https://placehold.co/300x180" alt="Project 1" />
+          <h3>Portfolio</h3>
+          <p>Modern portfolio built with HTML, JavaScript, and Lucide Icons</p>
+          <div class="stack-icons">
+            <i data-lucide="code"></i>
+            <i data-lucide="cloud"></i>
+            <i data-lucide="folder-git"></i>
+          </div>
+          <div class="proj-links">
+            <a href="#" class="proj-btn">Live Demo</a>
+            <a href="#" class="proj-btn">GitHub</a>
+          </div>
+        </div>
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://placehold.co/300x180" alt="Project 2" />
+          <h3>Stay Tuned</h3>
+          <p>Fun interactive playground with modern CSS/JS micro-interactions.</p>
+          <div class="stack-icons">
+            <i data-lucide="code"></i>
+            <i data-lucide="zap"></i>
+            <i data-lucide="github"></i>
+          </div>
+          <div class="proj-links">
+            <a href="#" class="proj-btn">Live Demo</a>
+            <a href="#" class="proj-btn">GitHub</a>
+          </div>
+        </div>
+        <!-- Add more cards as needed -->
+      </div>
+    </section>
+
+    <section class="spotify" id="nowplaying" data-aos="zoom-in">
+      <h2>🎧 Now Playing</h2>
+      <div class="spotify-widget" id="spotify-widget">
+        <img src="https://i.scdn.co/image/ab67616d00001e023b0bb7f9d1da61b5f09b3f7a" alt="Album Art" id="album-art" />
+        <div>
+          <strong id="track-title">Blinding Lights</strong><br />
+          <span id="track-artist">The Weeknd</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact" data-aos="fade-up">
+      <h2>Get in Touch</h2>
+      <p>Want to work together, chat frontend, or just say hi?
+        <a href="mailto:avinash@example.com">Drop me an email!</a>
+      </p>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Avinash Valder</p>
+    </footer>
+  </div>
+
+  <!-- Floating Action Button -->
+  <button class="fab" id="fab-menu" aria-label="Quick actions">
+    <i data-lucide="more-horizontal"></i>
+  </button>
+  <div class="fab-actions" id="fab-actions">
+    <button class="fab-action" id="themeToggle" title="Toggle dark mode"><i data-lucide="moon-star"></i></button>
+    <button class="fab-action" id="catToggle" title="Cat mode 🐱"><i data-lucide="cat"></i></button>
+    <button class="fab-action" id="scrollTop" title="Scroll to top"><i data-lucide="arrow-up"></i></button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>
